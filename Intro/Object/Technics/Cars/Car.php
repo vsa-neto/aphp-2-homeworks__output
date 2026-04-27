@@ -8,12 +8,8 @@ class Car
     private bool $isStarted = false;
     const int CRITICAL_SPEED = 200;
 
-    public function __construct(
-        string $brand,
-        string $model,
-        int $fuelLevel,
-
-    ) {
+    public function __construct(string $brand, string $model, int $fuelLevel)
+    {
         $this->brand = $brand;
         $this->model = $model;
         $this->fuelLevel = $fuelLevel;
@@ -21,8 +17,7 @@ class Car
 
     public function start(): void
     {
-
-        echo "объем топлива = $this->fuelLevel л.". PHP_EOL;
+        echo "объем топлива = $this->fuelLevel л." . PHP_EOL;
         switch (true) {
             case $this->fuelLevel === 0:
                 echo "Топливо осутствует!" . PHP_EOL;
@@ -35,14 +30,16 @@ class Car
                 $this->isStarted = true;
                 break;
         }
-    if($this->isStarted) {
+        if ($this->isStarted) {
             echo "Двигатель заведен" . PHP_EOL;
         }
     }
     public function drive(Drive $drive): void
     {
 
-    if($drive->currentSpeed === 0) {$this->isStarted = false; }
+        if ($drive->currentSpeed === 0) {
+            $this->isStarted = false;
+        }
         if ($this->isStarted) {
             if ($drive->currentSpeed > self::CRITICAL_SPEED) {
                 $drive->speedMessage(self::CRITICAL_SPEED);
@@ -51,5 +48,3 @@ class Car
         }
     }
 }
-
-

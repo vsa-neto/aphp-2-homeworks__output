@@ -23,9 +23,8 @@ function search_file($folderName, $fileName)
         if ($file == '.' || $file == '..') continue;
 
         $file_path = "$folderName/$file";
-
         // echo PHP_EOL.$file_path.PHP_EOL;
-
+        
         if (is_file($file_path)) {
             if ($file === $fileName . ".php") {
                 $found[] = $file_path;
