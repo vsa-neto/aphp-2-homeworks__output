@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 // require_once 'Student.php';
 // require_once 'Car.php';
 // require_once 'Drive.php';
