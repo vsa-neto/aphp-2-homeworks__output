@@ -7,7 +7,7 @@ require_once './functions.php';
 
 $director = new Director('Иванов', 'Иван', 'директор');
 $manager_1 = new Manager('Петров', 'Петр', 'менеджер по продажам');
-$manager_2 = new Manager('Федоров', 'федор', 'менеджер проектов');
+$manager_2 = new Manager('Федоров', 'Федор', 'менеджер проектов');
 $programmer_1 = new Programmer('Андреев', 'Андрей', 'программист');
 $programmer_2 = new Programmer('Сергеев', 'Сергей', 'программист');
 $tester_1 = new Tester('Максимов', 'Максим', 'тестировщик');

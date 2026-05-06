@@ -33,9 +33,6 @@ function employeesData(...$employees)
                 echo ($employee->codeCreator());
             }
 
-            if ($employee instanceof ApplicationCreatorInterface) {
-                echo ($employee->codeCreator());
-            }
         }
 
         echo PHP_EOL . "------------------------" . PHP_EOL;
